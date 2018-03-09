@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <title>ZEN</title>
+</head>
+<body>
+  <img class="logo" 
+  srcset="img/zen_logo@3x.png 134w,
+    img/zen_logo@2x.png 90w,
+    img/zen_logo.png 45w"
+    sizes="(min-width: 1024px) 91px,
+    91px"
+  src="img/zen_logo.png"
+  alt="Яндекс.Дзен">
+
+  <main class="main"></main>
+
+  <script id="template-s-picture" type="text/template">
+    <div class="header__container">
+      <h2 class="header__text header__text--s" style="color: {{titleColor}}">
+        {{title}}
+      </h2>
+      <button class="button article__actions article__actions--s-picture"></button>
+    </div>
+    <div class="picture">
+      <img class="picture__image" 
+        srcset="{{imageName}}@3x.{{imageExtension}} 336w,
+          {{imageName}}@2x.{{imageExtension}} 224w,
+          {{imageName}} 112w"
+        sizes="(min-width: 1024px) calc(.333 * 704px),
+          100vw"
+        src="{{image}}" 
+        alt="{{title}}">
+      <p class="picture__channel">{{channelName}}</p>
+    </div>
+    <button class="button article__like article__like--s"></button>
+  </script>
+
+  <script id="template-s-text" type="text/template">
+    <h2 class="header__text header__text--s" style="color: {{titleColor}}">
+      {{title}}
+    </h2>
+    <p class="article__text--s">
+        {{description}}
+    </p>
+    <p class="article__channel">{{channelName}}</p>
+    <button class="button article__actions article__actions--s-text"></button>
+    <button class="button article__like article__like--s"></button>
+  </script>  
+
+  <script id="template-m" type="text/template">
+    <div class="article__wrapper">
+      <div class="header__container">
+        <h2 class="header__text" style="color: {{titleColor}}">
+          {{title}}
+        </h2>
+      </div>
+      <div class="picture">
+          <img class="picture__image" 
+          srcset="{{imageName}}@3x.{{imageExtension}} 516w,
+            {{imageName}}@2x.{{imageExtension}} 344w,
+            {{imageName}} 172w"
+          sizes="(min-width: 1024px) calc(.5 * 704px),
+            100vw"
+          src="{{image}}" 
+          alt="{{title}}">
+          <p class="picture__channel">{{channelName}}</p>
+      </div>
+    </div>
+    <p class="article__text--m">
+      {{description}}
+    </p>
+    <button class="button article__actions article__actions--m"></button>
+    <button class="button article__like article__like--m"></button>
+  </script>
+
+  <script id="template-l" type="text/template">
+    <div class="picture picture--l">
+        <img class="picture__image" 
+        srcset="{{imageName}}@3x.{{imageExtension}} 696w,
+          {{imageName}}@2x.{{imageExtension}} 646w,
+          {{imageName}} 232w"
+        sizes="(min-width: 1024px) calc(.666 * 704px),
+          100vw"
+        src="{{image}}" 
+        alt="{{title}}">
+      <p class="picture__channel picture__channel--l">{{channelName}}</p>
+    </div>
+    <div class="article__right-side">
+      <h2 class="header__text" style="color: {{titleColor}}">
+        {{title}}
+      </h2>
+      <p class="article__text--l">
+        {{description}}
+      </p>
+      <button class="button article__actions article__actions--l"></button>
+    </div>
+    <button class="button article__like article__like--l"></button>
+  </script>
+  
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
