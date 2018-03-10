@@ -22,8 +22,9 @@
 
     if (item.image) {
       const [imageName, imageExtension] = item.image.split('.');
-      html = substitute(html, 'imageName', {imageName});
-      html = substitute(html, 'imageExtension', {imageExtension});
+      const imageData = {imageName, imageExtension};
+      html = substitute(html, 'imageName', imageData);
+      html = substitute(html, 'imageExtension', imageData);
     }
 
     if (!item.channelName) {
