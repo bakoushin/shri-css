@@ -15,7 +15,12 @@
   data.forEach(renderItem);
 
   function renderItem(item) {
-    let html = getTemplate(item);
+    let postfix = '';
+    if (item.size == 's') {
+      postfix = item.image ? '-picture' : '-text';
+    }
+
+    let html = templates[item.size + postfix];
     for (let key in item) {
       html = substitute(html, key, item);
     }
@@ -34,16 +39,9 @@
     const el = document.createElement('div');
     el.classList.add('article');
     el.classList.add('article--' + item.size);
+    el.classList.add('article--' + item.size + postfix);
     el.innerHTML = html;
     main.appendChild(el);
-  }
-
-  function getTemplate(item) {
-    let postfix = '';
-    if (item.size == 's') {
-      postfix = item.image ? '-picture' : '-text';
-    }
-    return templates[item.size + postfix];
   }
 
   function substitute(string, key, data) {

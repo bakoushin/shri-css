@@ -15,8 +15,8 @@
   srcset="img/zen_logo@3x.png 134w,
     img/zen_logo@2x.png 90w,
     img/zen_logo.png 45w"
-    sizes="(min-width: 1024px) 91px,
-    91px"
+    sizes="(min-width: 1200px) 134px,
+      91px"
   src="img/zen_logo.png"
   alt="Яндекс.Дзен">
 
@@ -33,14 +33,15 @@
       <img class="picture__image" 
         srcset="{{imageName}}@3x.{{imageExtension}} 336w,
           {{imageName}}@2x.{{imageExtension}} 224w,
-          {{imageName}} 112w"
-        sizes="(min-width: 1024px) calc(.333 * 704px),
+          {{imageName}}.{{imageExtension}} 112w"
+        sizes="(min-width: 780px) calc(.333 * 704px)
+          (min-width: 580px) calc(.5 * 100vw),
           100vw"
         src="{{image}}" 
         alt="{{title}}">
       <p class="picture__channel">{{channelName}}</p>
     </div>
-    <button class="button article__like article__like--s"></button>
+    <button class="button article__like article__like--s-picture"></button>
   </script>
 
   <script id="template-s-text" type="text/template">
@@ -52,7 +53,7 @@
     </p>
     <p class="article__channel">{{channelName}}</p>
     <button class="button article__actions article__actions--s-text"></button>
-    <button class="button article__like article__like--s"></button>
+    <button class="button article__like article__like--s-text"></button>
   </script>  
 
   <script id="template-m" type="text/template">
@@ -66,18 +67,18 @@
           <img class="picture__image" 
           srcset="{{imageName}}@3x.{{imageExtension}} 516w,
             {{imageName}}@2x.{{imageExtension}} 344w,
-            {{imageName}} 172w"
-          sizes="(min-width: 1024px) calc(.5 * 704px),
+            {{imageName}}.{{imageExtension}} 172w"
+          sizes="(min-width: 580px) calc(.5 * 100vw),
             100vw"
-          src="{{image}}" 
+            src="{{image}}" 
           alt="{{title}}">
           <p class="picture__channel">{{channelName}}</p>
       </div>
+      <button class="button article__actions article__actions--m"></button>
     </div>
     <p class="article__text--m">
       {{description}}
     </p>
-    <button class="button article__actions article__actions--m"></button>
     <button class="button article__like article__like--m"></button>
   </script>
 
@@ -86,17 +87,17 @@
         <img class="picture__image" 
         srcset="{{imageName}}@3x.{{imageExtension}} 696w,
           {{imageName}}@2x.{{imageExtension}} 646w,
-          {{imageName}} 232w"
-        sizes="(min-width: 1024px) calc(.666 * 704px),
-          100vw"
+          {{imageName}}.{{imageExtension}} 232w"
+        sizes="(min-width: 780px) calc(.666 * 100vw),
+            100vw"
         src="{{image}}" 
         alt="{{title}}">
       <p class="picture__channel picture__channel--l">{{channelName}}</p>
     </div>
+    <h2 class="header__text header__text--l" style="color: {{titleColor}}">
+      {{title}}
+    </h2>
     <div class="article__right-side">
-      <h2 class="header__text" style="color: {{titleColor}}">
-        {{title}}
-      </h2>
       <p class="article__text--l">
         {{description}}
       </p>
@@ -104,7 +105,7 @@
     </div>
     <button class="button article__like article__like--l"></button>
   </script>
-  
+
   <script src="data.js"></script>
   <script src="script.js"></script>
 
