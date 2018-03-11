@@ -346,10 +346,6 @@ body {
     flex-shrink: 0;
   }
 
-  .header__text {
-    line-height: 1.5;
-  }
-    
   .header__text--l {
     grid-column: span 2;
     order: initial;
