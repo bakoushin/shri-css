@@ -24,9 +24,11 @@
 
   <script id="template-s-picture" type="text/template">
     <div class="header__container">
-      <h2 class="header__text header__text--s" style="color: {{titleColor}}">
-        {{title}}
-      </h2>
+      <div class="header__wrapper">
+        <h2 class="header__text header__text--s" style="color: {{titleColor}}">
+          {{title}}
+        </h2>
+      </div>
       <button class="button article__actions article__actions--s-picture"></button>
     </div>
     <div class="picture">
@@ -45,9 +47,11 @@
   </script>
 
   <script id="template-s-text" type="text/template">
-    <h2 class="header__text header__text--s" style="color: {{titleColor}}">
-      {{title}}
-    </h2>
+    <div class="header__wrapper">
+      <h2 class="header__text header__text--s" style="color: {{titleColor}}">
+        {{title}}
+      </h2>
+    </div>  
     <p class="article__text--s">
         {{description}}
     </p>
@@ -59,9 +63,11 @@
   <script id="template-m" type="text/template">
     <div class="article__wrapper">
       <div class="header__container">
-        <h2 class="header__text" style="color: {{titleColor}}">
-          {{title}}
-        </h2>
+        <div class="header__wrapper">
+          <h2 class="header__text" style="color: {{titleColor}}">
+            {{title}}
+          </h2>
+        </div>
       </div>
       <div class="picture">
           <img class="picture__image" 
@@ -94,9 +100,11 @@
         alt="{{title}}">
       <p class="picture__channel picture__channel--l">{{channelName}}</p>
     </div>
-    <h2 class="header__text header__text--l" style="color: {{titleColor}}">
-      {{title}}
-    </h2>
+    <div class="header__wrapper header__wrapper--l">
+      <h2 class="header__text header__text--l" style="color: {{titleColor}}">
+        {{title}}
+      </h2>
+    </div>
     <div class="article__right-side">
       <p class="article__text--l">
         {{description}}
