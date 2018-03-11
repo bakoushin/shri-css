@@ -106,7 +106,7 @@ body {
 /* Like button */
 
 .article__like {
-  background: url(/img/heart.png) no-repeat;
+  background: url(img/heart.png) no-repeat;
   background-position: center center;
   width: 17px;
   height: 16px;
@@ -134,7 +134,7 @@ body {
 /* Actions button */
 
 .article__actions {
-  background: url(/img/actions.png) no-repeat;
+  background: url(img/actions.png) no-repeat;
   background-position: center center;
   width: 17px;
   height: 4px;
