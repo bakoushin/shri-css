@@ -197,15 +197,6 @@ body {
   -webkit-box-orient: vertical;
 }
 
-.header__text--s {
-  font-family: 'YS Text', sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.2;
-  max-height: 4.32rem;
-  margin: 0;
-  flex-grow: 1;
-}
-
 /* Picture */
 
 .picture {
@@ -354,6 +345,15 @@ body {
     height: initial;
   }
 
+  .header__text--s {
+    font-family: 'YS Text', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    max-height: 4.32rem;
+    margin: 0;
+    flex-grow: 1;
+  }
+   
   .picture--l {
     grid-column: span 4;
     grid-row: span 2;
