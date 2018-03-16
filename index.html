@@ -36,10 +36,10 @@
         srcset="{{imageName}}@3x.{{imageExtension}} 336w,
           {{imageName}}@2x.{{imageExtension}} 224w,
           {{imageName}}.{{imageExtension}} 112w"
-        sizes="(min-width: 1200px) calc(900px / 3),
-          (min-width: 780px) calc(704px / 3 ),
+        sizes="(min-width: 1200px) calc((900px - 16px * 2) / 3),
+          (min-width: 780px) calc((704px - 16px * 2) / 3 ),
           (min-width: 580px) calc((100vw - 16px * 3) / 2),
-          calc((100vw - 16px * 2) / 2)"
+          calc(100vw - 16px * 2)"
         src="{{image}}" 
         alt="{{title}}">
       <p class="picture__channel">{{channelName}}</p>
@@ -78,7 +78,7 @@
           sizes="(min-width: 1200px) calc((900px - 16px) / 2),
             (min-width: 780px) calc((704px - 16px) / 2 ),
             (min-width: 580px) calc((100vw - 16px * 3) / 2),
-            calc((100vw - 16px * 2) / 2)"
+            calc(100vw - 16px * 2)"
           src="{{image}}" 
           alt="{{title}}">
           <p class="picture__channel">{{channelName}}</p>
@@ -97,9 +97,9 @@
         srcset="{{imageName}}@3x.{{imageExtension}} 696w,
           {{imageName}}@2x.{{imageExtension}} 646w,
           {{imageName}}.{{imageExtension}} 232w"
-        sizes="(min-width: 1200px) calc(900px * .66),
-          (min-width: 780px) calc(704px * .66),
-          calc((100vw - 16px * 2) / 2)"
+        sizes="(min-width: 1200px) 595px,
+          (min-width: 780px) 464px,
+          calc(100vw - 16px * 2)"
         src="{{image}}" 
         alt="{{title}}">
       <p class="picture__channel picture__channel--l">{{channelName}}</p>
